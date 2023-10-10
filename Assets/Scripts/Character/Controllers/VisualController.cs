@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,17 +6,18 @@ using UnityEngine;
 public class VisualController : MonoBehaviour
 {
     private Dictionary<ECollectibleType, GameObject> _collectibleTypeToVisualGO;
-    private Dictionary<ETriggerObject, ECollectibleType> _triggerObjTypeToCollectibleType;
     private GameObject _currentVisual;
+
+    [SerializeField] private Character _character;
     [SerializeField] private Transform _visualsParentTransform;
-    [SerializeField] private ECollectibleType _initVisualType;
-    [SerializeField] private List<ECollectibleType> _visualTypes;
-    [SerializeField] private List<ETriggerObject> _triggerObjTypes;
 
     private void Awake()
     {
         GetVisuals();
-        SetDictionary();
+    }
+
+    private void Start()
+    {
         TryChangeVisual(ETriggerObject.Circle_Collectible);
     }
 
@@ -33,18 +33,10 @@ public class VisualController : MonoBehaviour
         }
     }
 
-    private void SetDictionary()
-    {
-        _triggerObjTypeToCollectibleType = new Dictionary<ETriggerObject, ECollectibleType>();
-        for (int i = 0; i < _visualTypes.Count; i++)
-        {
-            _triggerObjTypeToCollectibleType.Add(_triggerObjTypes[i], _visualTypes[i]);
-        }
-    }
-
     public void TryChangeVisual(ETriggerObject triggerObjType)
     {
-        ECollectibleType collectibleType = _triggerObjTypeToCollectibleType[triggerObjType];
+        ECollectibleType collectibleType = _character.GetCollectibleType(triggerObjType);
+
         if (_currentVisual != null)
         {
             _currentVisual.SetActive(false);

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ObstacleDetector : BaseDetector
 {
-    private Sequence _tween; 
     [SerializeField] private Transform _characterVisualTransform;
     [SerializeField] private float _duration;
 
@@ -14,6 +13,5 @@ public class ObstacleDetector : BaseDetector
         _characterVisualTransform
             .DOShakePosition(_duration, vibrato: 2, randomness: 5)
             .SetLink(_characterVisualTransform.gameObject);
-        Debug.Log("Shake");
     }
 }
