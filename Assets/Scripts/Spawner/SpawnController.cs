@@ -17,7 +17,6 @@ public class SpawnController : MonoBehaviour
     {
         int randomValue = Random.Range(0, 100);
         int randomSpawnPoint = Random.Range(0, SpawnPoints.Count);
-        Debug.Log("ObstacleChance: " + randomValue);
         if (randomValue <= _obstacleChance)
         {
             Instantiate(_obstacle.gameObject, SpawnPoints[randomSpawnPoint].position , Quaternion.identity);

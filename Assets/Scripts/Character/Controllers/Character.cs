@@ -7,4 +7,5 @@ public class Character : MonoBehaviour
     [SerializeField] private VisualController _visualController;
 
     public VisualController VisualController => _visualController;
+
 }
