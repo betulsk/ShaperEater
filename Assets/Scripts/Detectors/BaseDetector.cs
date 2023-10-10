@@ -27,6 +27,9 @@ public class BaseDetector : MonoBehaviour
 
     public virtual void HitCustomActions()
     {
-        Destroy(LastTriggerObject.gameObject);
+        if (LastTriggerObject.TriggerObjectType != ETriggerObject.Obstacle)
+        {
+            Destroy(LastTriggerObject.gameObject);
+        }
     }
 }

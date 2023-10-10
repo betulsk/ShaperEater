@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectibleDetector : BaseDetector
 {
     [SerializeField] private VisualController _visualController;
+
     public override void HitCustomActions()
     {
         _visualController.TryChangeVisual(LastTriggerObject.TriggerObjectType);
