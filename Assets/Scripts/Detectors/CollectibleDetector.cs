@@ -1,27 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectibleDetector : MonoBehaviour
+public class CollectibleDetector : BaseDetector
 {
-    [SerializeField] private ETriggerObject _targetTriggerObjType;
-    [SerializeField] private TriggerObjectController _triggerObjectController;
-    [SerializeField] private VisualController _visualController;
-
-    private void Awake()
-    {
-        _triggerObjectController.OnHitTriggerObject += OnHitTriggerObject;
-    }
-
-    private void OnDestroy()
-    {
-        _triggerObjectController.OnHitTriggerObject -= OnHitTriggerObject;
-    }
-
-    private void OnHitTriggerObject(TriggerObject triggerObj)
-    {
-        if (triggerObj.TriggerObjectType == _targetTriggerObjType)
-        {
-            //_visualController.TryChangeVisual();
-            Destroy(triggerObj.gameObject);
-        }
-    }
 }
