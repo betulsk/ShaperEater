@@ -21,6 +21,7 @@ public class VisualController : MonoBehaviour
     {
         var collectibleList = Enum.GetValues(typeof(ECollectibleType)).Cast<ECollectibleType>().ToList();
         int count = 1;
+        _collectibleTypeToVisualGO = new Dictionary<ECollectibleType, GameObject>();
         foreach (Transform visualTransform in _visualsParentTransform)
         {
             _collectibleTypeToVisualGO.Add(collectibleList[count], visualTransform.gameObject);
@@ -30,6 +31,10 @@ public class VisualController : MonoBehaviour
 
     public void TryChangeVisual(ECollectibleType collectibleType)
     {
+        if (_currentVisual != null)
+        {
+            _currentVisual.SetActive(false);
+        }
         _collectibleTypeToVisualGO[collectibleType].SetActive(true);
         _currentVisual = _collectibleTypeToVisualGO[_initVisualType];
     }
