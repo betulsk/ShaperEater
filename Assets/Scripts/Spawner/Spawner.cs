@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform _parentTransform;
     [SerializeField] private Transform _initTransform;
     [SerializeField] private int _slotCount;
-    [SerializeField] private int _spawnDuration;
+    [SerializeField] private float _spawnDuration;
     [SerializeField] private float _slotDistance;
 
 

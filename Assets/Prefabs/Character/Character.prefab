@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7247038390145535077}
-  - component: {fileID: 1281545235200085747}
+  - component: {fileID: 5952801725141031465}
   m_Layer: 0
   m_Name: HexagonCollectibleDetector
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 6803186386312322660}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1281545235200085747
+--- !u!114 &5952801725141031465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 429967913175052585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38ad172847dd7347a7fb321652cf4b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3161c6b1f8d37a44a880d3eb7dc3141b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTriggerObjType: 23
   _triggerObjectController: {fileID: 2152731993998790596}
+  LastTriggerObject: {fileID: 0}
+  _visualController: {fileID: 3635351943279249003}
 --- !u!1 &1610825158279941488
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visualsParentTransform: {fileID: 5362729130435477135}
   _initVisualType: 3
+  _visualTypes: 010000000200000003000000
+  _triggerObjTypes: 150000001700000016000000
 --- !u!1 &4524990924178012610
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6951332258425022743}
-  - component: {fileID: 8035501910076636754}
+  - component: {fileID: 6183161354381497825}
   m_Layer: 0
   m_Name: SquareCollectibleDetector
   m_TagString: Untagged
@@ -272,7 +276,7 @@ Transform:
   m_Father: {fileID: 6803186386312322660}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8035501910076636754
+--- !u!114 &6183161354381497825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,11 +285,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4782017877054432193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38ad172847dd7347a7fb321652cf4b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3161c6b1f8d37a44a880d3eb7dc3141b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTriggerObjType: 22
   _triggerObjectController: {fileID: 2152731993998790596}
+  LastTriggerObject: {fileID: 0}
+  _visualController: {fileID: 3635351943279249003}
 --- !u!1 &5188877127820692651
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7427671048544126261}
-  - component: {fileID: 6350308515935221862}
+  - component: {fileID: 3801677621899137012}
   m_Layer: 0
   m_Name: CircleCollectibleDetector
   m_TagString: Untagged
@@ -349,7 +355,7 @@ Transform:
   m_Father: {fileID: 6803186386312322660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6350308515935221862
+--- !u!114 &3801677621899137012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -358,11 +364,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5861541395153412877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a38ad172847dd7347a7fb321652cf4b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3161c6b1f8d37a44a880d3eb7dc3141b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTriggerObjType: 21
   _triggerObjectController: {fileID: 2152731993998790596}
+  LastTriggerObject: {fileID: 0}
+  _visualController: {fileID: 3635351943279249003}
 --- !u!1 &5911180541475952991
 GameObject:
   m_ObjectHideFlags: 0

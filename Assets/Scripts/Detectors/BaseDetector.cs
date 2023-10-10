@@ -27,6 +27,6 @@ public class BaseDetector : MonoBehaviour
 
     public virtual void HitCustomActions()
     {
-
+        Destroy(LastTriggerObject.gameObject);
     }
 }

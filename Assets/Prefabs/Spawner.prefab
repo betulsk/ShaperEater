@@ -83,7 +83,7 @@ MonoBehaviour:
   _parentTransform: {fileID: 7948854530896169497}
   _initTransform: {fileID: 5167196515522419027}
   _slotCount: 5
-  _spawnDuration: 1
+  _spawnDuration: 0.5
   _slotDistance: 2
 --- !u!1818360608 &3521872782671392248
 PositionConstraint:
