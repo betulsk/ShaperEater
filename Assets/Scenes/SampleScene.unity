@@ -820,16 +820,16 @@ MonoBehaviour:
   Pools:
   - Tag: Circle
     Prefab: {fileID: 4040866993993200905, guid: e27d6903774cfce4895ce9c1c88b535a, type: 3}
-    Size: 6
+    Size: 10
   - Tag: Square
     Prefab: {fileID: 452435791779630955, guid: 587d337955bf3d04598a7d4157f19b9f, type: 3}
-    Size: 6
+    Size: 10
   - Tag: Hexagon
     Prefab: {fileID: 1003108854776812822, guid: a97f52e86d5e5d742a5f2fbffb569087, type: 3}
-    Size: 6
+    Size: 10
   - Tag: Obstacle
     Prefab: {fileID: 2587679544588402340, guid: d28a8fa57244e4347aab5400869f68b7, type: 3}
-    Size: 6
+    Size: 10
 --- !u!1001 &811987690
 PrefabInstance:
   m_ObjectHideFlags: 0

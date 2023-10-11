@@ -177,12 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a67decdc5800774c9d3ca987483f855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstacleChance: 50
-  _obstacle: {fileID: 2797654788945605090, guid: d28a8fa57244e4347aab5400869f68b7, type: 3}
-  _collectibles:
-  - {fileID: 8867482544253541389, guid: e27d6903774cfce4895ce9c1c88b535a, type: 3}
-  - {fileID: 5688162101011446802, guid: a97f52e86d5e5d742a5f2fbffb569087, type: 3}
-  - {fileID: 4998138585301886575, guid: 587d337955bf3d04598a7d4157f19b9f, type: 3}
+  _obstacleChance: 38
   _collectiblesTag:
   - Circle
   - Square
