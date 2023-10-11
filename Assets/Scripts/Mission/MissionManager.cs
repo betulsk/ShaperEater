@@ -33,6 +33,11 @@ public class MissionManager : Singleton<MissionManager>
 
     private void ChooseMission()
     {
+        if (_missions.Count < _count)
+        {
+            GameManager.Instance.EnterEndGamePhase();
+            return;
+        }
         CurrentMission = new CurrenctMission();
         CurrentMission.TargetCollectibleType = _missions[_count].TargetCollectible;
         CurrentMission.TargetCount = _missions[_count].TargetCount;
