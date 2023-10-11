@@ -25,6 +25,10 @@ public class SimpleMovementBehaviour : MonoBehaviour
             _canMove = true;
             if (TryMove())
             {
+                if (_moveRoutine != null)
+                {
+                    StopCoroutine(_moveRoutine);
+                }
                 _moveRoutine = StartCoroutine(MoveRoutine());
             }
         }

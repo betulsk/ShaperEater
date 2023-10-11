@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 829851140183117758}
   - component: {fileID: 829851140183117745}
   - component: {fileID: 5841683370964545909}
+  - component: {fileID: 4604539592591682874}
   m_Layer: 5
   m_Name: MissionWidget
   m_TagString: Untagged
@@ -243,11 +244,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e231ba16a65c304eb69ad1bcff73f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvasGroup: {fileID: 4604539592591682874}
+  _duration: 1
   _slider: {fileID: 829851141179464430}
   _missonText: {fileID: 829851141844325155}
   _missionImage: {fileID: 829851139768834478}
   _sliderBGImage: {fileID: 829851139802540174}
   _fillImage: {fileID: 829851141151904996}
+--- !u!225 &4604539592591682874
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829851140183117747}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &829851141151904998
 GameObject:
   m_ObjectHideFlags: 0

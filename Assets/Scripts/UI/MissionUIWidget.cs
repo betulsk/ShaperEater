@@ -1,9 +1,8 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MissionUIWidget : MonoBehaviour
+public class MissionUIWidget : WidgetBase
 {
     private const string SLASH = "/";
     private MissionManager _missionManager;
@@ -20,6 +19,7 @@ public class MissionUIWidget : MonoBehaviour
         _missionManager.OnMissionSelected += OnMissionSelected;
         InventoryController.OnDataUpdated += OnDataUpdated;
         _sliderBGImageAlfa = _sliderBGImage.color.a;
+        GameManager.Instance.OnPhaseChanged += OnPhaseChanged;
     }
 
     private void OnDestroy()
@@ -29,6 +29,15 @@ public class MissionUIWidget : MonoBehaviour
             MissionManager.Instance.OnMissionSelected -= OnMissionSelected;
         }
         InventoryController.OnDataUpdated -= OnDataUpdated;
+        GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+    }
+
+    private void OnPhaseChanged(EPhase phase)
+    {
+        if (phase is EPhase.GamePhase)
+        {
+            FadeIn();
+        }
     }
 
     private void OnDataUpdated(ECollectibleType collectibleType, int collectedCollectibleCount)

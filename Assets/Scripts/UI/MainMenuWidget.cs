@@ -18,36 +18,9 @@ public class MainMenuWidget : WidgetBase
 
     private void OnPlayButtonClicked()
     {
+        _playButton.onClick.RemoveListener(OnPlayButtonClicked);
         GameManager.Instance.EnterGamePhase();
         FadeOut();
+        gameObject.SetActive(false);
     }
-
-    //private void Fade(float endValue, float duration, TweenCallback onEnded)
-    //{
-    //    if (_fadeTween != null)
-    //    {
-    //        _fadeTween.Kill(false);
-    //    }
-    //    _fadeTween = _canvasGroup.DOFade(endValue, duration);
-    //    _fadeTween.onComplete += onEnded;
-    //}
-
-    //private void FadeIn()
-    //{
-    //    Fade(1f, _duration, () =>
-    //    {
-    //        _canvasGroup.interactable = true;
-    //        _canvasGroup.blocksRaycasts = true;
-    //    });
-    //}
-
-    //private void FadeOut()
-    //{
-    //    Fade(0f, _duration / 2, () =>
-    //    {
-    //        _canvasGroup.interactable = false;
-    //        _canvasGroup.blocksRaycasts = false;
-    //    });
-    //}
-
 }
