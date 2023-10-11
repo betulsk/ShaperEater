@@ -15,13 +15,13 @@ MonoBehaviour:
   MissionDatas:
   - TargetCollectible: 1
     TargetCount: 5
-    MissionImage: {fileID: 21300000, guid: f58747e25a8c01346972a7de5bc0d1c7, type: 2}
+    MissionImage: {fileID: 8118445881933483339, guid: ac2a753bdde29de48846171b47c4ddc8, type: 3}
     MissionColor: {r: 1, g: 0.18431373, b: 0.18431373, a: 1}
   - TargetCollectible: 2
     TargetCount: 5
-    MissionImage: {fileID: 21300000, guid: e00d057e6c331f046961a7b56c3517b9, type: 2}
+    MissionImage: {fileID: -5019925986607196024, guid: ac2a753bdde29de48846171b47c4ddc8, type: 3}
     MissionColor: {r: 0.2509804, g: 1, b: 0.21176471, a: 1}
   - TargetCollectible: 3
     TargetCount: 5
-    MissionImage: {fileID: 21300000, guid: ab8a4a43e657ecf4992eb95bb12e28e1, type: 2}
+    MissionImage: {fileID: 4090421022341515886, guid: ac2a753bdde29de48846171b47c4ddc8, type: 3}
     MissionColor: {r: 0.1254902, g: 0.8784314, b: 1, a: 1}
