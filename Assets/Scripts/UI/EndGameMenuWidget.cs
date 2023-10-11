@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndGameMenuWidget : WidgetBase
@@ -33,6 +34,7 @@ public class EndGameMenuWidget : WidgetBase
     private void OnRetryButtonClicked()
     {
         FadeOut();
+        SceneManager.LoadScene("SampleScene");
         //ToDo:Load Scene
     }
 }

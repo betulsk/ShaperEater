@@ -40,6 +40,7 @@ public class MissionUIWidget : WidgetBase
         if (phase is EPhase.GamePhase)
         {
             FadeIn();
+            OnMissionSelected();
         }
     }
 

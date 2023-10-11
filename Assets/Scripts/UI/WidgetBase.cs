@@ -14,8 +14,8 @@ public class WidgetBase : MonoBehaviour
         {
             _fadeTween.Kill(false);
         }
-        _fadeTween = _canvasGroup.DOFade(endValue, duration);
-        _fadeTween.onComplete += onEnded;
+        _fadeTween = _canvasGroup.DOFade(endValue, duration).SetLink(_canvasGroup.gameObject);
+        //_fadeTween.onComplete += onEnded;
     }
 
     public void FadeIn()
