@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _character: {fileID: 3978011877141686738}
   _visualsParentTransform: {fileID: 5362729130435477135}
+  _duration: 0.14
 --- !u!1 &4524990924178012610
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331112583559886420, guid: b804142bf0fb41046af3c56c913ee45a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b804142bf0fb41046af3c56c913ee45a, type: 3}

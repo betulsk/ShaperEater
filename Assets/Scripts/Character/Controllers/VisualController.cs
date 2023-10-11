@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ public class VisualController : MonoBehaviour
 
     [SerializeField] private Character _character;
     [SerializeField] private Transform _visualsParentTransform;
+    [SerializeField] private float _duration;
 
     private void Awake()
     {
@@ -18,9 +20,24 @@ public class VisualController : MonoBehaviour
 
     private void Start()
     {
-        TryChangeVisual(ETriggerObject.Circle_Collectible);
+        GameManager.Instance.OnPhaseChanged += OnPhaseChanged;
     }
 
+    private void OnPhaseChanged(EPhase phase)
+    {
+        if (phase is EPhase.GamePhase)
+        {
+            TryChangeVisual(ETriggerObject.Circle_Collectible);
+            DOTween.Complete(_currentVisual);
+            _currentVisual.transform
+                .DOShakePosition(_duration, vibrato: 2, randomness: 5)
+                .SetLink(_currentVisual.gameObject);
+        }
+        if (phase is EPhase.EndGamePhase)
+        {
+            GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        }
+    }
     private void GetVisuals()
     {
         var collectibleList = Enum.GetValues(typeof(ECollectibleType)).Cast<ECollectibleType>().ToList();
