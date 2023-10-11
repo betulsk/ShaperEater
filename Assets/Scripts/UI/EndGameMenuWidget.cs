@@ -14,7 +14,10 @@ public class EndGameMenuWidget : WidgetBase
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        }
         _retryButton.onClick.RemoveListener(OnRetryButtonClicked);
     }
 

@@ -49,6 +49,13 @@ MonoBehaviour:
   LastTriggerObject: {fileID: 0}
   _visualController: {fileID: 3635351943279249003}
   _inventoryController: {fileID: 7850344458061509100}
+  _collectibleCollectedSound:
+    Guid:
+      Data1: 726223647
+      Data2: 1314756881
+      Data3: -1078983548
+      Data4: -57933361
+    Path: event:/EatCollectible
 --- !u!1 &1610825158279941488
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +319,13 @@ MonoBehaviour:
   LastTriggerObject: {fileID: 0}
   _visualController: {fileID: 3635351943279249003}
   _inventoryController: {fileID: 7850344458061509100}
+  _collectibleCollectedSound:
+    Guid:
+      Data1: 726223647
+      Data2: 1314756881
+      Data3: -1078983548
+      Data4: -57933361
+    Path: event:/EatCollectible
 --- !u!1 &5188877127820692651
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,6 +406,13 @@ MonoBehaviour:
   LastTriggerObject: {fileID: 0}
   _visualController: {fileID: 3635351943279249003}
   _inventoryController: {fileID: 7850344458061509100}
+  _collectibleCollectedSound:
+    Guid:
+      Data1: 726223647
+      Data2: 1314756881
+      Data3: -1078983548
+      Data4: -57933361
+    Path: event:/EatCollectible
 --- !u!1 &5911180541475952991
 GameObject:
   m_ObjectHideFlags: 0

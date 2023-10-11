@@ -29,7 +29,10 @@ public class MissionUIWidget : WidgetBase
             MissionManager.Instance.OnMissionSelected -= OnMissionSelected;
         }
         InventoryController.OnDataUpdated -= OnDataUpdated;
-        GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        }
     }
 
     private void OnPhaseChanged(EPhase phase)

@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager>
         IsGamePhaseStarted = true;
         PhaseType = EPhase.GamePhase;
         OnPhaseChanged?.Invoke(PhaseType);
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.EnteredGamePhase, this.transform.position);
     }
 
     public void EnterEndGamePhase()
@@ -38,6 +39,8 @@ public class GameManager : Singleton<GameManager>
         IsGamePhaseFinished = true;
         PhaseType = EPhase.EndGamePhase;
         OnPhaseChanged?.Invoke(PhaseType);
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.EnteredEndGamePhase, this.transform.position);
+
     }
 }
 
