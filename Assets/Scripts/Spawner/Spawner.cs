@@ -5,24 +5,38 @@ public class Spawner : MonoBehaviour
 {
     private WaitForSeconds _wfs;
     private Coroutine _coroutine;
+
     [SerializeField] private SpawnController _spawnController;
     [SerializeField] private Transform _parentTransform;
     [SerializeField] private Transform _initTransform;
+
     [SerializeField] private int _slotCount;
     [SerializeField] private float _spawnDuration;
     [SerializeField] private float _slotDistance;
-
 
     private void Awake()
     {
         CreateSpawnPoints();
         _wfs = new WaitForSeconds(_spawnDuration);
-        StartRoutine();
+        GameManager.Instance.OnPhaseChanged += OnPhaseChanged;
     }
 
     private void OnDestroy()
     {
         StopRoutine();
+    }
+
+    private void OnPhaseChanged(EPhase phase)
+    {
+        if (phase is EPhase.GamePhase)
+        {
+            StartRoutine();
+        }
+        if (phase is EPhase.EndGamePhase)
+        {
+            StopRoutine();
+            GameManager.Instance.OnPhaseChanged -= OnPhaseChanged;
+        }
     }
 
     public void StartRoutine()
@@ -58,6 +72,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnRoutine()
     {
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             _spawnController.Spawn();

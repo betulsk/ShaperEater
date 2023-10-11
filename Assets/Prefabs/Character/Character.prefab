@@ -95,8 +95,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterController: {fileID: 8230861087866328249}
   _characterTransform: {fileID: 1984696469431059559}
-  _xSpeed: 5
-  _isGameEnded: 0
+  _xSpeed: 1.5
+  _canMove: 0
   _upBoundry: {fileID: 0}
   _downBoundry: {fileID: 0}
 --- !u!1 &2059378609056320402
@@ -226,9 +226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _character: {fileID: 3978011877141686738}
   _visualsParentTransform: {fileID: 5362729130435477135}
-  _initVisualType: 3
-  _visualTypes: 010000000200000003000000
-  _triggerObjTypes: 150000001700000016000000
 --- !u!1 &4524990924178012610
 GameObject:
   m_ObjectHideFlags: 0

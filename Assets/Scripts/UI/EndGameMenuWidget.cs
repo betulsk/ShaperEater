@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class EndGameMenuWidget : WidgetBase
 {
     [SerializeField] private Button _retryButton;
+    [SerializeField] private ParticleSystem _confettiParticle;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class EndGameMenuWidget : WidgetBase
         if (phase is EPhase.EndGamePhase)
         {
             FadeIn();
+            _confettiParticle.Play();
         }
     }
 
