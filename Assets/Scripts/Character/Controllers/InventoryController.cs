@@ -25,7 +25,10 @@ public class InventoryController : MonoBehaviour
     public void SaveCollectibles(ETriggerObject triggerObjType)
     {
         ECollectibleType collectibleType = _character.GetCollectibleType(triggerObjType);
-        _collectibleTypeToCount[collectibleType]++;
-        OnDataUpdated?.Invoke(collectibleType, _collectibleTypeToCount[collectibleType]);
+        if (MissionManager.Instance.CurrentMission.TargetCollectibleType == collectibleType)
+        {
+            _collectibleTypeToCount[collectibleType]++;
+            OnDataUpdated?.Invoke(collectibleType, _collectibleTypeToCount[collectibleType]);
+        }
     }
 }
