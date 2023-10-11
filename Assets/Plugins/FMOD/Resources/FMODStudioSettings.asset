@@ -494,7 +494,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 1
   sourceProjectPath: ../audio-system/audio-system.fspro
-  sourceBankPath: ../audio-system/Build
+  sourceBankPath: Assets/audio-system/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
