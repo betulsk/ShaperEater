@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +7,7 @@ public class SpawnController : MonoBehaviour
 
     [Range(0, 100)]
     [SerializeField] private int _obstacleChance;
-    [SerializeField] private ObstacleBase _obstacle;
-    [SerializeField] private List<CollectibleBase> _collectibles;
+    [SerializeField] private List<string> _collectiblesTag;
 
     public List<Transform> SpawnPoints => _spawnPoints;
 
@@ -19,9 +17,9 @@ public class SpawnController : MonoBehaviour
         int randomSpawnPoint = Random.Range(0, SpawnPoints.Count);
         if (randomValue <= _obstacleChance)
         {
-            Instantiate(_obstacle.gameObject, SpawnPoints[randomSpawnPoint].position , Quaternion.identity);
+            ObjectPooler.Instance.Pop("Obstacle", SpawnPoints[randomSpawnPoint].position, Quaternion.identity);
             return;
         }
-        Instantiate(_collectibles[Random.Range(0,_collectibles.Count)].gameObject, SpawnPoints[randomSpawnPoint].position, Quaternion.identity);
+        ObjectPooler.Instance.Pop(_collectiblesTag[Random.Range(0, _collectiblesTag.Count)], SpawnPoints[randomSpawnPoint].position, Quaternion.identity);
     }
 }

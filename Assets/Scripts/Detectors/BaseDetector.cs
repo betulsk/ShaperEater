@@ -29,7 +29,8 @@ public class BaseDetector : MonoBehaviour
     {
         if (LastTriggerObject.TriggerObjectType != ETriggerObject.Obstacle)
         {
-            Destroy(LastTriggerObject.gameObject);
+            ObjectPooler.Instance.Push(LastTriggerObject.gameObject);
+            //Destroy(LastTriggerObject.gameObject);
         }
     }
 }
