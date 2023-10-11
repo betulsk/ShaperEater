@@ -1,14 +1,9 @@
-using DG.Tweening;
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenuWidget : MonoBehaviour
+public class MainMenuWidget : WidgetBase
 {
-    private Tween _fadeTween;
     [SerializeField] private Button _playButton;
-    [SerializeField] private CanvasGroup _canvasGroup;
-    [SerializeField] private float _duration;
 
     private void Awake()
     {
@@ -27,32 +22,32 @@ public class MainMenuWidget : MonoBehaviour
         FadeOut();
     }
 
-    private void Fade(float endValue, float duration, TweenCallback onEnded)
-    {
-        if (_fadeTween != null)
-        {
-            _fadeTween.Kill(false);
-        }
-        _fadeTween = _canvasGroup.DOFade(endValue, duration);
-        _fadeTween.onComplete += onEnded;
-    }
+    //private void Fade(float endValue, float duration, TweenCallback onEnded)
+    //{
+    //    if (_fadeTween != null)
+    //    {
+    //        _fadeTween.Kill(false);
+    //    }
+    //    _fadeTween = _canvasGroup.DOFade(endValue, duration);
+    //    _fadeTween.onComplete += onEnded;
+    //}
 
-    private void FadeIn()
-    {
-        Fade(1f, _duration, () =>
-        {
-            _canvasGroup.interactable = true;
-            _canvasGroup.blocksRaycasts = true;
-        });
-    }
+    //private void FadeIn()
+    //{
+    //    Fade(1f, _duration, () =>
+    //    {
+    //        _canvasGroup.interactable = true;
+    //        _canvasGroup.blocksRaycasts = true;
+    //    });
+    //}
 
-    private void FadeOut()
-    {
-        Fade(0f, _duration / 2, () =>
-        {
-            _canvasGroup.interactable = false;
-            _canvasGroup.blocksRaycasts = false;
-        });
-    }
+    //private void FadeOut()
+    //{
+    //    Fade(0f, _duration / 2, () =>
+    //    {
+    //        _canvasGroup.interactable = false;
+    //        _canvasGroup.blocksRaycasts = false;
+    //    });
+    //}
 
 }

@@ -33,7 +33,7 @@ public class MissionManager : Singleton<MissionManager>
 
     private void ChooseMission()
     {
-        if (_missions.Count < _count)
+        if (_missions.Count <= _count)
         {
             GameManager.Instance.EnterEndGamePhase();
             return;
