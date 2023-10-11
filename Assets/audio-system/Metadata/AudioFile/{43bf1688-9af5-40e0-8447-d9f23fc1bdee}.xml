@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{43bf1688-9af5-40e0-8447-d9f23fc1bdee}">
+		<property name="assetPath">
+			<value>SoundFX/Let The Games Begin.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.7806349206349206</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a33fb27-6dec-45d6-b034-8fa24b03b80f}</destination>
+		</relationship>
+	</object>
+</objects>

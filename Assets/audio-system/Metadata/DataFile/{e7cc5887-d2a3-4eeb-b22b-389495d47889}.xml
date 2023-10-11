@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{e7cc5887-d2a3-4eeb-b22b-389495d47889}">
+		<property name="assetPath">
+			<value>SoundFX/Well Done.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a33fb27-6dec-45d6-b034-8fa24b03b80f}</destination>
+		</relationship>
+	</object>
+</objects>

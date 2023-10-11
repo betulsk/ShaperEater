@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{f0a74ead-ff7b-4192-a9d9-d5d36e19959d}">
+		<property name="assetPath">
+			<value>SoundFX/Eat Sound.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a33fb27-6dec-45d6-b034-8fa24b03b80f}</destination>
+		</relationship>
+	</object>
+</objects>
