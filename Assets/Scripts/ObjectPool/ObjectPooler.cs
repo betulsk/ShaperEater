@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static ObjectPooler;
 
 public class ObjectPooler : Singleton<ObjectPooler>
 {
@@ -16,6 +13,7 @@ public class ObjectPooler : Singleton<ObjectPooler>
 
     public List<Pool> Pools;
     public Dictionary<string, Queue<GameObject>> PoolDictionary;
+
     void Start()
     {
         PoolDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -25,11 +23,10 @@ public class ObjectPooler : Singleton<ObjectPooler>
 
             for (int i = 0; i < pool.Size; i++)
             {
-                GameObject obj = Instantiate(pool.Prefab);
+                GameObject obj = Instantiate(pool.Prefab, gameObject.transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
-
             PoolDictionary.Add(pool.Tag, objectPool);
         }
     }
